@@ -1,0 +1,700 @@
+/* ================================
+   AppZen — Global Styles
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111827;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ================================
+   Header
+   ================================ */
+
+header {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 28px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid transparent;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+nav a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #6b7280;
+
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #111827;
+}
+
+
+/* ================================
+   Main
+   ================================ */
+
+main {
+    width: 100%;
+}
+
+
+/* ================================
+   Hero
+   ================================ */
+
+.hero {
+    position: relative;
+
+    max-width: 1280px;
+    min-height: 680px;
+
+    margin: 0 auto;
+    padding: 150px 40px 140px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    right: -150px;
+    top: 80px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #f1f5f9 0%,
+            #f8fafc 45%,
+            transparent 70%
+        );
+
+    z-index: 0;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: 120px;
+    bottom: 40px;
+
+    border-radius: 50%;
+
+    border: 1px solid #eef2f7;
+
+    z-index: 0;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero > p:first-child {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #64748b;
+
+    margin-bottom: 26px;
+}
+
+.hero h1 {
+    max-width: 1000px;
+
+    font-size: clamp(52px, 7vw, 96px);
+    line-height: 0.98;
+    letter-spacing: -5px;
+
+    margin-bottom: 36px;
+}
+
+.hero p:nth-of-type(2) {
+    max-width: 620px;
+
+    font-size: 21px;
+    line-height: 1.6;
+
+    color: #64748b;
+
+    margin-bottom: 42px;
+}
+
+.hero > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    padding: 15px 26px;
+
+    background: #111827;
+    color: #ffffff;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.hero > a:hover {
+    background: #1f2937;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(17, 24, 39, 0.15);
+}
+
+
+/* ================================
+   Apps Section
+   ================================ */
+
+#apps {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    padding: 110px 40px 120px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+#apps > p:first-child {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    color: #64748b;
+
+    margin-bottom: 18px;
+}
+
+#apps h2 {
+    max-width: 700px;
+
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+
+    margin-bottom: 55px;
+}
+
+
+/* ================================
+   App Cards
+   ================================ */
+
+#apps > div {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+article {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 42px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+article::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -70px;
+    bottom: -70px;
+
+    border-radius: 50%;
+
+    background: #f8fafc;
+
+    z-index: 0;
+}
+
+article > * {
+    position: relative;
+    z-index: 1;
+}
+
+article:hover {
+    transform: translateY(-6px);
+
+    border-color: #d1d5db;
+
+    box-shadow:
+        0 18px 40px rgba(17, 24, 39, 0.08);
+}
+
+
+/* ================================
+   App Icons
+   ================================ */
+
+.app-icon {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #f8fafc;
+
+    color: #111827;
+
+    border: 1px solid #eef2f7;
+}
+
+.app-icon svg {
+    width: 38px;
+    height: 38px;
+}
+
+article h3 {
+    font-size: 32px;
+    letter-spacing: -1px;
+
+    margin-bottom: 16px;
+}
+
+article p {
+    max-width: 500px;
+
+    color: #64748b;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    margin-bottom: 32px;
+}
+
+article a {
+    margin-top: auto;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: transform 0.2s ease;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+article span {
+    margin-top: auto;
+
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    border-radius: 999px;
+
+    background: #f1f5f9;
+
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   About
+   ================================ */
+
+#about {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    padding: 110px 40px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+#about > p:first-child {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    color: #64748b;
+
+    margin-bottom: 18px;
+}
+
+#about h2 {
+    max-width: 800px;
+
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+}
+
+#about > p:nth-of-type(2) {
+    max-width: 850px;
+
+    font-size: 19px;
+    line-height: 1.8;
+
+    color: #374151;
+
+    margin-bottom: 16px;
+}
+
+#about > p:nth-of-type(3) {
+    max-width: 760px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #64748b;
+}
+
+
+/* ================================
+   Policy Pages
+   ================================ */
+
+body:has(#about h1) #about {
+    max-width: 1000px;
+    padding: 110px 40px 130px;
+}
+
+body:has(#about h1) #about h1 {
+    max-width: 800px;
+
+    font-size: 64px;
+    line-height: 1.05;
+    letter-spacing: -3px;
+
+    margin-bottom: 28px;
+}
+
+body:has(#about h1) #about h2 {
+    max-width: 800px;
+
+    font-size: 36px;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+
+    margin-top: 58px;
+    margin-bottom: 20px;
+}
+
+body:has(#about h1) #about > p:nth-of-type(n + 2) {
+    max-width: 800px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #64748b;
+
+    margin-bottom: 18px;
+}
+
+body:has(#about h1) #about > p:last-child {
+    margin-top: 45px;
+
+    font-size: 14px;
+
+    color: #9ca3af;
+}
+
+
+/* ================================
+   Footer
+   ================================ */
+
+footer {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    padding: 42px 40px;
+
+    border-top: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+footer p {
+    color: #9ca3af;
+
+    font-size: 14px;
+}
+
+footer > div:last-child {
+    display: flex;
+
+    gap: 24px;
+}
+
+footer > div:last-child a {
+    font-size: 14px;
+
+    color: #6b7280;
+
+    transition: color 0.2s ease;
+}
+
+footer > div:last-child a:hover {
+    color: #111827;
+}
+
+
+/* ================================
+   Mobile
+   ================================ */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 22px 20px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 620px;
+
+        padding: 90px 20px 100px;
+    }
+
+    .hero::before {
+        width: 360px;
+        height: 360px;
+
+        right: -180px;
+        top: 100px;
+    }
+
+    .hero::after {
+        width: 180px;
+        height: 180px;
+
+        right: 30px;
+        bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+
+        letter-spacing: -3px;
+
+        line-height: 1;
+    }
+
+    .hero p:nth-of-type(2) {
+        font-size: 18px;
+    }
+
+
+    /* Apps */
+
+    #apps {
+        padding: 75px 20px;
+    }
+
+    #apps h2 {
+        font-size: 36px;
+
+        letter-spacing: -1.5px;
+    }
+
+    #apps > div {
+        grid-template-columns: 1fr;
+    }
+
+    article {
+        padding: 30px;
+
+        min-height: 260px;
+    }
+
+    article h3 {
+        font-size: 27px;
+    }
+
+
+    /* About */
+
+    #about {
+        padding: 75px 20px;
+    }
+
+    #about h2 {
+        font-size: 36px;
+
+        letter-spacing: -1.5px;
+    }
+
+    #about > p:nth-of-type(2) {
+        font-size: 18px;
+    }
+
+    #about > p:nth-of-type(3) {
+        font-size: 17px;
+    }
+
+
+    /* Policy Pages */
+
+    body:has(#about h1) #about {
+        padding: 75px 20px 90px;
+    }
+
+    body:has(#about h1) #about h1 {
+        font-size: 46px;
+        letter-spacing: -2px;
+    }
+
+    body:has(#about h1) #about h2 {
+        font-size: 32px;
+        letter-spacing: -1px;
+
+        margin-top: 45px;
+    }
+
+    body:has(#about h1) #about > p:nth-of-type(n + 2) {
+        font-size: 17px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 35px 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
+
+
+/* ================================
+   Small Phones
+   ================================ */
+
+@media (max-width: 420px) {
+
+    nav {
+        gap: 12px;
+    }
+
+    .hero {
+        padding-top: 70px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+
+        letter-spacing: -2.5px;
+    }
+}
